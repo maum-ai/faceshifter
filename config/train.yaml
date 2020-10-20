@@ -1,0 +1,24 @@
+log:
+  log_dir: 'log'
+  chkpt_dir: 'chkpt'
+
+
+arcface:
+  chkpt_path: 'Arcface.pth'
+  vector_size: 256
+
+data:
+  dataset_dir: ''
+  valset_dir: ''
+
+model:
+  learning_rate_E_G: 4e-4
+  learning_rate_D: 4e-4
+
+  beta1: 0
+  beta2: 0.999
+
+  batch_size: 16
+
+  num_workers: 16
+  grad_clip: 0.0
