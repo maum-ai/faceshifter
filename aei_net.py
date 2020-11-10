@@ -130,7 +130,7 @@ class AEINet(pl.LightningModule):
             transforms.ToTensor(),
             ])
         dataset = AEI_Dataset(self.hp.data.dataset_dir, transform=transform)
-        return DataLoader(dataset, batch_size=self.hp.model.batch_size, num_workers=self.hp.model.num_workers, drop_last=True)
+        return DataLoader(dataset, batch_size=self.hp.model.batch_size, num_workers=self.hp.model.num_workers, shuffle=True, drop_last=True)
 
     def val_dataloader(self):
         transform = transforms.Compose([
