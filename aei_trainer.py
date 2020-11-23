@@ -10,8 +10,8 @@ from aei_net import AEINet
 
 
 def main(args):
-    model = AEINet(args)
     hp = OmegaConf.load(args.config)
+    model = AEINet(hp)
     save_path = os.path.join(hp.log.chkpt_dir, args.name)
     os.makedirs(save_path, exist_ok=True)
 

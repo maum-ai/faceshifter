@@ -1,5 +1,3 @@
-from omegaconf import OmegaConf
-
 import torch
 import torch.nn.functional as F
 
@@ -19,10 +17,8 @@ from model.loss import GANLoss, AEI_Loss
 from dataset import *
 
 class AEINet(pl.LightningModule):
-    def __init__(self, hparams):
+    def __init__(self, hp):
         super(AEINet, self).__init__()
-        self.hparams = hparams  # used for pl
-        hp = OmegaConf.load(hparams.config)
         self.hp = hp
 
         self.G = ADDGenerator(hp.arcface.vector_size)
