@@ -143,5 +143,5 @@ def process_image(image):
 with Pool(processes=cpu_count()) as pool:
     pool.map(process_image, files)        
     print("done")
-    p.close()
-    p.join()
+    pool.close()
+    pool.join()
