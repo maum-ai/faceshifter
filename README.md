@@ -6,7 +6,7 @@
 Unofficial Implementation of [FaceShifter: Towards High Fidelity And Occlusion Aware Face Swapping](https://arxiv.org/abs/1912.13457) with [Pytorch-Lightning](https://github.com/PyTorchLightning/pytorch-lightning).
 In the paper, there are two networks for full pipe-line, AEI-Net and HEAR-Net. We only implement the AEI-Net, which is main network for face swapping.
 
-### Take a look [HifiFace](https://github.com/mindslab-ai/hififace), our implimentation of a more recent face swapping model.
+### Take a look [HifiFace](https://github.com/mindslab-ai/hififace), our implementation of a more recent face swapping model.
 
 ## Datasets
 
